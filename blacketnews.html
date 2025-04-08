@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blacket News</title>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Blacket News</h1>
+        <div id="login-register-section">
+            <button onclick="toggleLoginRegister()">Login / Register</button>
+        </div>
+    </header>
+    <div class="search-bar">
+        <input type="text" id="search-query" placeholder="Search for news..." />
+        <button onclick="fetchNews()">Search</button>
+    </div>
+    <div id="login-register-form">
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="register()">Register</button>
+        <button onclick="login()">Login</button>
+    </div>
+    <div id="admin-article-form" class="admin-article-form">
+        <h2>Create Article</h2>
+        <input type="text" id="article-title" placeholder="Article Title" />
+        <textarea id="article-description" placeholder="Article Description"></textarea>
+        <textarea id="article-content" placeholder="Article Content"></textarea>
+        <button class="create-button" onclick="createArticle()">Publish Article</button>
+    </div>
+    <div class="news-container" id="news-container">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
